@@ -18,7 +18,7 @@ function createUser (username, passwordString, callback) {
 
 function getUser (username, callback) {
   DynamoStore.getItem('users', 'username', username, (err,data) => {
-    callback(null, dynamoItemToUser(data.item));
+    callback(null, dynamoItemToUser(data.Item));
   });
 };
 
