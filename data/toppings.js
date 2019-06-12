@@ -36,7 +36,7 @@ function createTopping (name, preview_image, image, order) {
 
 function dynamoItemsToToppings (items) {
   return items.map((item) => {
-    return new Topping(item.id.S,item.name.S, item.preview_image.S, item.image.S, +item.order.N);
+    return new Topping(item.id.S, item.name.S, item.preview_image.S, item.image.S, +item.order.N);
   });
 }
 

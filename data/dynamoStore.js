@@ -13,9 +13,9 @@ function putItem(table,item,callback) {
         let val;
         if(typeof item[key] === 'string'){
             val = {S: item[key]};
-        } else if(typeof item === 'number' ){
+        } else if(typeof item[key] === 'number' ){
             val = {N: '' + item[key]};
-        } else if(item[key instanceof Array]) {
+        } else if(item[key] instanceof Array) {
             val = {SS: item[key]};
         }
         params.Item[key] = val;
